@@ -109,7 +109,7 @@ alias reston='gnome-terminal --tab -e "$(pwd)/scripts/pyramidrun.sh" --tab -e "$
  sudo apt-get install python-pip
 
 4. clone the repository
- git clone https://bitbucket.org/katemalash/easyrest/src
+ git clone git clone https://katemalash@bitbucket.org/katemalash/easyrest.git
 
 frontend
 1. navigate to frontend
