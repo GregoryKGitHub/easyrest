@@ -99,7 +99,9 @@ alias reston='gnome-terminal --tab -e "$(pwd)/scripts/pyramidrun.sh" --tab -e "$
 [Install Docker Compose](https://docs.docker.com/compose/install/)
 
  `sudo apt-get install git`
+ 
  `sudo apt-get install docker`
+ 
  `sudo apt-get install docker-compose`
 
 2. install npm
@@ -112,15 +114,25 @@ alias reston='gnome-terminal --tab -e "$(pwd)/scripts/pyramidrun.sh" --tab -e "$
  `git clone git clone https://katemalash@bitbucket.org/katemalash/easyrest.git`
 
 frontend
+
 1. navigate to frontend
+
 2. `npm install`
+
 backend
+
 1. navigate to project folder
+
 2. `pip install --no-cache-dir -e ".[testing]"`
+
 running project
+
 `sudo docker-compose up`
+
 filling db
+
 `docker-compose run backend initialize_easyrest_db --fill development.ini`
+
 
 
 
