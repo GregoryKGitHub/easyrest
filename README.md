@@ -108,7 +108,7 @@ alias reston='gnome-terminal --tab -e "$(pwd)/scripts/pyramidrun.sh" --tab -e "$
  `sudo apt-get install npm`
 
 3. install pip
- `sudo apt-get install python-pip`
+ `sudo apt-get install python3-pip`
 
 4. clone the repository
  `git clone git clone https://katemalash@bitbucket.org/katemalash/easyrest.git`
@@ -123,7 +123,7 @@ backend
 
 1. navigate to project folder
 
-2. `pip install --no-cache-dir -e ".[testing]"`
+2. `pip3 install --no-cache-dir -e ".[testing]"`
 
 running project
 
