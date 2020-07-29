@@ -23,7 +23,7 @@ def fill_db(session):
 
     fake = Faker()
     # initialize seeds
-    fake.seed(4321)
+    fake.seed_instance(4321)
     seed(4321)  # for randint
 
     # initialize containers for model objects
