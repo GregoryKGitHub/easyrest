@@ -208,3 +208,13 @@ Reset and fill database
 12. Run project
 
 `pserve development.ini`
+
+13. Navigate to frontend
+
+`cd frontend`
+
+14. Install Node.js
+
+15. `npm install`
+
+16. `npm start`
