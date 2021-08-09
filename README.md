@@ -124,6 +124,8 @@ backend
 1. navigate to project folder
 
 2. `pip3 install --no-cache-dir -e ".[testing]"`
+3. install SQLAlchemy:
+ `pip install SQLAlchemy==1.3.24`
 
 running project
 
