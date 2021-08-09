@@ -10,7 +10,7 @@ requires = [
     'waitress',
     'pyramid_retry',
     'pyramid_tm',
-    'SQLAlchemy',
+    'SQLAlchemy <=1.3.24',
     'transaction',
     'zope.sqlalchemy',
     'psycopg2-binary',
