@@ -6,11 +6,11 @@ import time
 from faker import Faker
 from passlib.hash import pbkdf2_sha256
 
-from tags_data import Tags
-from ..models import Tag, Menu, Restaurant, MenuItem, User, UserRole, Category, Order, OrderAssoc
-from menu_data import Menus, Categories, Images
-from new_menu_items import Menu_items as Meals
-import rest_data
+from .tags_data import Tags
+from easyrest.models import Tag, Menu, Restaurant, MenuItem, User, UserRole, Category, Order, OrderAssoc
+from .menu_data import Menus, Categories, Images
+from .new_menu_items import Menu_items as Meals
+from .rest_data import *
 
 
 def fill_db(session):
@@ -90,13 +90,13 @@ def fill_db(session):
 
         key = True
         while key:
-            img_index = randint(0, len(rest_data.Images)-1)
+            img_index = randint(0, len(Images)-1)
             if img_index not in used_images:
                 used_images.append(img_index)
                 key = False
 
         if rest_status == 1:
-            markup = str(rest_data.Description_markups[markup_counter])
+            markup = str(Description_markups[markup_counter])
             markup_counter += 1
         else:
             markup = None
@@ -108,7 +108,7 @@ def fill_db(session):
             "phone": "+380362" + str(100000 + i),
             "status": rest_status,
             "creation_date": int(time.time()),
-            "image": rest_data.Images[img_index],
+            "image": Images[img_index],
             "description_markup": markup
         }
         rest_status = rest_status + 1

@@ -1,7 +1,7 @@
-FROM python:2.7
+FROM python:3.10
 
 WORKDIR /usr/src/easyrest
 
 COPY setup.py ./
 
-RUN pip install --no-cache-dir -e ".[testing]"
+RUN pip3 install --no-cache-dir -e ".[testing]"

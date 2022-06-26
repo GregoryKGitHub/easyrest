@@ -47,7 +47,7 @@ class Base(object):
         for c in self.__table__.columns:
             s += '%s = %s, ' % (c.name, getattr(self, c.name))
         s += ')'
-        print s
+        print(s)
         return ""
 
     def as_dict(self, exclude=[], include=[], with_relations=[], depth=0):

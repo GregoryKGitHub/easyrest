@@ -14,9 +14,9 @@ from passlib.hash import pbkdf2_sha256
 from pyramid.httpexceptions import HTTPForbidden
 
 from .meta import Base
-from validator import validation
+from .validator import validation
 from ..exceptions import ValidationError
-from restaurant import Restaurant
+from .restaurant import Restaurant
 from ..scripts.json_helpers import form_dict
 
 

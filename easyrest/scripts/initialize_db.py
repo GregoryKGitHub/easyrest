@@ -6,8 +6,8 @@ import sys
 from pyramid.paster import bootstrap, setup_logging
 from sqlalchemy.exc import OperationalError
 
-from ..models.meta import Base
-from insert_example_data import fill_db
+from easyrest.models.meta import Base
+from easyrest.scripts.insert_example_data import fill_db
 
 
 def setup_models(dbsession):
@@ -78,14 +78,16 @@ def main(argv=sys.argv):
             dbsession = env['request'].dbsession
             if args.reset:
                 drop_models(dbsession)
-                print 'Database has been droped'
+                print('Database has been droped')
                 setup_models(dbsession)
-                print 'Database has been created'
+                print('Database has been created')
             else:
                 setup_models(dbsession)
-                print 'Database has been created'
+                print('Database has been created')
             if args.fill:
                 fill_models(dbsession)
-                print 'Database has been populated by testing data'
+                print('Database has been populated by testing data')
     except OperationalError as e:
-        print 'OperationalError: %s' % (e)
+        print('OperationalError: %s' % (e))
+
+#main()
